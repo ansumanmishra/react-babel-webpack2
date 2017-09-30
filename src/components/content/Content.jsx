@@ -1,31 +1,25 @@
-// Dependencies
 import React from 'react';
 
-// Styles
-import './Content.scss';
+import TodoItem from './todoItem.jsx';
+import AddTodo from './addTodoItem.jsx';
 
 class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.state = {
-      input: 'World',
-    };
+
+    // One way of looping the data
+    this.todoList = this.props.todoList.map((item, i) => {
+      return <TodoItem itemName={item.name} key={i}/>;
+    });
   }
-  handleInputChange(e) {
-    this.setState({ input: e.target.value });
-  }
+
   render() {
-    return (
-      <div className="content">
-        <input
-          type="text"
-          value={this.state.input}
-          onChange={this.handleInputChange}
-        />
-        <span>Hello {this.state.input}</span>
+    return(
+      <div>
+        <AddTodo />
+        <ul>{this.todoList}</ul>
       </div>
-    );
+    )
   }
 }
 

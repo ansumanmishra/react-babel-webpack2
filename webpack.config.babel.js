@@ -33,7 +33,7 @@ export default (env = defaultEnv) => ({
   ],
   module: {
     rules: [
-      {
+     /* {
         test: /.jsx?$/,
         exclude: /node_modules/,
         enforce: 'pre',
@@ -42,7 +42,7 @@ export default (env = defaultEnv) => ({
             loader: 'eslint-loader',
           }
         ]
-      },
+      },*/
       {
         test: /.jsx?$/,
         exclude: /node_modules/,

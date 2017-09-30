@@ -1,6 +1,7 @@
 {
   parser: "babel-eslint",
   "extends": "airbnb",
+  "indent": ["error", 4],
   "rules": {
     "react/require-extension": "off",
     "linebreak-style": "off"
