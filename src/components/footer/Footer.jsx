@@ -4,8 +4,9 @@ import './Footer.scss';
 
 const Footer = () => {
 	return(
-		<div>
-			Copyright
+		<div className="container">
+			<hr/>
+			Copyright 2017
 		</div>
 	);
 }
