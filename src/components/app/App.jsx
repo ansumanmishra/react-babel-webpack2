@@ -52,7 +52,7 @@ export default class App extends React.Component {
 				<Header />
 				<div className="container">
 					<AddTodo addNewTodo={this.addNewTodo.bind(this)} />
-					<span>{this.state.todoList.name}</span>
+					<br />
 					<Todo todoList={this.state.todoList} deleteTodo={this.deleteTodo.bind(this)}/>
 				</div>
 				<Footer />

@@ -1,5 +1,5 @@
-![kloc.io logo](http://kloc.io/assets/img/logo.png?v=0e8202529e)
+A sample todo project built on React - Babel - Webpack2
 
-A boilerplate for a React - Babel - Webpack2 project.
+Install the application - npm install
 
-Read more about it at [kloc.io](http://kloc.io/setting-up-react-workflow-babel-webpack/)
+Run the application - npm run dev

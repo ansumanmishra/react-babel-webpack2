@@ -8,8 +8,15 @@ class AddTodo extends React.Component {
 
 	addTodo(e) {
 		e.preventDefault();
+
+		var name = this.refs.todo.value;
+
+		if(!name) {
+			return;
+		}
+
 		let todo = {
-			name: this.refs.todo.value,
+			name: name,
 			id: _.random(100, 1000)
 		};
 		this.refs.todo.value = '';
@@ -20,7 +27,10 @@ class AddTodo extends React.Component {
 		return(
 			<div>
 				<form onSubmit={this.addTodo.bind(this)} >
-					<input type="text" name="todo" ref="todo" placeholder="add your text..."/> <button type="submit" className="btn btn-primary">ADD</button>
+					<div className="form-group">
+						<input type="text" className="form-control" name="todo" ref="todo" placeholder="add your text..."/> <br />
+						<button type="submit" className="btn btn-primary">ADD NOTE</button>
+					</div>
 				</form>
 			</div>
 		);
